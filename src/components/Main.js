@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SearchIcon from "@material-ui/icons/Search";
+// import SearchIcon from "@material-ui/icons/Search";
 import Card from "../components/Card";
 import axios from "axios";
 
@@ -12,7 +12,7 @@ const Main = () => {
         .get(
           "https://www.googleapis.com/books/v1/volumes?q=" +
             search +
-            "&key=AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU" +
+            "&key=AIzaSyAR7NSHi9hphbuiMsq2pcUfXRdSKLIW2sA" +
             "&maxResults=40"
         )
         .then((res) => setData(res.data.items))
@@ -40,7 +40,7 @@ const Main = () => {
               onKeyPress={searchBook}
             />
             <button>
-              <SearchIcon />
+              <i className="fas fa-search"></i>
             </button>
           </div>
           <img src="./images/bg2.png" alt="" />
